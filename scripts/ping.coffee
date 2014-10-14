@@ -46,8 +46,3 @@ module.exports = (robot) ->
     robot.hear /やぎぬー/, (msg) ->
      msg.send "みんな呼んであげてね！"
 
-     cron = require('cron').CronJob
-     module.exports = (robot) ->
-     new cron('0 0 8 * * *', () ->
-                     robot.messageRoom "#general", "おはよう朝だYo"
-                     , null, true, 'Asia/Tokyo').start()
